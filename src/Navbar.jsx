@@ -1,11 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <header>
       <nav>
-        <h1>dummy tag</h1>
+        <ul>
+          <li>
+            <Link className="" to="/register">Daftar</Link>
+          </li>
+        </ul>
       </nav>
       <Outlet />
     </header>
