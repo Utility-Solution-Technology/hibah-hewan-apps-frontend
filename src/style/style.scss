@@ -1,0 +1,88 @@
+@import 'variables';
+@import 'bootstrap-edited';
+
+@mixin box-shadow($bs-config) {
+  box-shadow: $bs-config;
+  -webkit-box-shadow: $bs-config;
+  -moz-box-shadow: $bs-config;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.C-container-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh
+}
+
+.C-card {
+  @include box-shadow($bs-dark-opacity3);
+  border-radius: $br-8;
+}
+
+.C-link {
+  padding: .85rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.C-btn-wrapper {
+  height: calc(44px + .8rem);
+  display: flex;
+  margin: auto;
+}
+
+.C-btn {
+  all: unset;
+  width: 50%;
+  height: 44px;
+  margin: auto;
+  text-align: center;
+  border-radius: $br-8;
+  color: $color-white;
+  background-color: $color-main;
+
+  &:hover {
+    background-color: $color-main-darker;
+  }
+
+  &:active {
+    @include box-shadow($bs-main);
+    border: 1px solid $color-main-brighter;
+  }
+
+}
+
+.C-form-title {
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-main;
+  border-top-left-radius: $br-8;
+  border-top-right-radius: $br-8;
+}
+
+.C-input {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  padding: .8em;
+  padding-bottom: .4em;
+  border-bottom: 2px solid $color-black;
+
+  &:focus {
+    border-bottom-color: $color-main;
+  }
+}
+
