@@ -55,11 +55,10 @@ html {
     background-color: $color-main-darker;
   }
 
-  &:active {
+  &:active, &:focus {
     @include box-shadow($bs-main);
-    border: 1px solid $color-main-brighter;
+    border: 2px solid $color-main-brighter;
   }
-
 }
 
 .C-form-title {

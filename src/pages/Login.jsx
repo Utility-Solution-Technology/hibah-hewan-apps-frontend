@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-function Register() {
+function Login() {
   const usernameRef = useRef();
+
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -14,29 +15,20 @@ function Register() {
   return (
     <main className="C-container-full p-3">
       <form className="C-card col-12 col-lg-5 p-3" autoComplete="off" onSubmit={handleSubmit}>
-        <h2 className="C-form-title">Registration</h2>
+        <h2 className="C-form-title">Login</h2>
         <div className="mb-3">
-          <input type="text" className="C-input" id="username" placeholder="Username" ref={usernameRef} required />
-        </div>
-        <div className="mb-3">
-          <input type="text" className="C-input" id="whatsapp" placeholder="Whatsapp" required />
-        </div>
-        <div className="mb-3">
-          <input type="email" className="C-input" id="email" placeholder="Email" required />
+          <input type="text" className="C-input" id="email_or_username" placeholder="Email / Username" ref={usernameRef} required />
         </div>
         <div className="mb-3">
           <input type="password" className="C-input" id="password" placeholder="Password" required />
         </div>
-        <div className="mb-3">
-          <input type="password" className="C-input" id="confirm_password" placeholder="Confirm Password" required />
-        </div>
         <div className="C-btn-wrapper mb-3">
-          <button className="C-btn" type="submit">Signup</button>
+          <button className="C-btn" type="submit">Login</button>
         </div>
         <div className="mb-3">
           <p className="text-center">
             Already have an account?
-            <Link className="C-link" to="/login">Login here!</Link>
+            <Link className="C-link" to="/register">Signup here!</Link>
           </p>
         </div>
       </form>
@@ -44,4 +36,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Login;
