@@ -9,8 +9,8 @@ export default function AuthNavbar() {
 
   return (
     <>
-      <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-      <li><Link className="dropdown-item" to="/" onClick={() => handleLogout}>Logout</Link></li>
+      <li><Link className="C-link" to="/profile">Profile</Link></li>
+      <li><Link className="C-link" to="/" onClick={() => handleLogout}>Logout</Link></li>
     </>
   );
 }
