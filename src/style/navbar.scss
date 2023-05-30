@@ -1,0 +1,153 @@
+@mixin navbar {
+  nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4em;
+    padding: 0 9%;
+    background-color: $color-white;
+    @include box-shadow($bs-dark-opacity3);
+
+    .C-menu-lg {
+      position: absolute;
+      height: 100%;
+
+      .C-logo-text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color-main;
+
+        &:hover {
+          color: $color-main;
+        }
+
+        &>span {
+          color: $color-black;
+        }
+      }
+    }
+
+    .C-navlist {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+      gap: 1em;
+      padding: 0;
+      height: 100%;
+    }
+
+    .C-link-btn {
+      border-radius: $br-8;
+      border: 2px solid $color-main;
+
+      &:hover {
+        color: $color-white !important;
+        background-color: $color-main-darker !important;
+      }
+    }
+
+    .C-signup {
+      color: $color-white !important;
+      background-color: $color-main-brighter !important;
+    }
+
+    @include _navlist-close;
+  }
+
+  .C-dropdown-menu {
+    &>* {
+      padding: 0;
+
+      &>* {
+        display: block;
+        padding: .7em;
+        text-align: center;
+
+        &:hover {
+          color: $color-black;
+          background-color: $color-white-darker;
+        }
+      }
+    }
+  }
+}
+
+@mixin navbar-lg {
+  nav {
+    background-color: $color-white;
+    padding: 0;
+
+    .C-menu-lg {
+      position: relative;
+      z-index: 100;
+
+      .C-logo-text {
+        padding: .85rem;
+        width: fit-content;
+      }
+
+      input {
+        width: 44px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 1em;
+        cursor: pointer;
+      }
+
+      .C-open-icon {
+        display: block;
+      }
+
+      .C-close-icon {
+        display: none;
+      }
+    }
+
+    .C-navlist {
+      display: block;
+      transform: translateY(-15em);
+      transition: all .3s ease-in;
+    }
+
+    @include _navlist-close;
+
+    .C-navlist.C-navlist-close {
+      transform: unset;
+    }
+
+    .C-link {
+      display: block;
+      width: 100%;
+      background-color: $color-white;
+      text-align: center;
+
+      &:hover {
+        color: $color-black;
+        background-color: $color-white-darker;
+      }
+    }
+  }
+
+  .C-dropdown-menu {
+    transform: unset !important;
+    position: unset !important;
+    border: unset !important;
+    border-radius: unset !important;
+    width: 100vw;
+    padding: .8em 2em;
+    background-color: $color-white;
+    @include box-shadow($bs-dark-opacity3-inset);
+  }
+}
+
+@mixin _navlist-close {
+  .C-navlist.C-navlist-close {
+    transform: unset;
+  }
+}
