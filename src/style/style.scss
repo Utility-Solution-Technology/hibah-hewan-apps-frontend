@@ -1,11 +1,14 @@
 @import 'variables';
 @import 'bootstrap-edited';
+@import 'navbar';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
   -webkit-box-shadow: $bs-config;
   -moz-box-shadow: $bs-config;
 }
+
+@include navbar;
 
 body,
 html {
@@ -33,6 +36,11 @@ html {
   padding: .85rem;
   text-decoration: none;
   font-weight: 600;
+  color: $color-main;
+
+  &:hover {
+    color: $color-main-darker;
+  }
 }
 
 .C-btn-wrapper {
@@ -85,3 +93,6 @@ html {
   }
 }
 
+@media only screen and (max-width:992px) {
+  @include navbar-lg;
+}
