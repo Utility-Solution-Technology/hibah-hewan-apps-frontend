@@ -4,6 +4,7 @@ function Home() {
   return (
     <main>
       <h1>testing</h1>
+      <p>ganteng</p>
     </main>
   );
 }
