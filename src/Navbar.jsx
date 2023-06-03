@@ -1,8 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
+import { cookies, cookieKeys } from './cookies/cookies-keys';
 import AuthNavbar from './components/auth-component/authAdditional';
 
 function Navbar() {
+  const [authBool, setAuthBool] = useState('');
+
+  const { auth } = cookieKeys;
+
   const openRef = useRef(null);
   const closeRef = useRef(null);
   const navlistRef = useRef(null);
@@ -26,8 +31,11 @@ function Navbar() {
     getAllList.forEach((item) => item.addEventListener('click', handleCloseMenu));
   }, []);
 
-  const auth = localStorage.getItem('auth');
-  const authBool = (auth !== null);
+  useEffect(() => {
+    const getAuth = cookies.get(auth);
+    setAuthBool(getAuth !== undefined);
+  }, [auth]);
+
   return (
     <header>
       <nav>
