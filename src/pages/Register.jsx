@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { swalConfig, changeSwalConfig } from '../utils/swal-handler';
 import axios from '../proxy/baseURL';
+import { cookies, cookieKeys } from '../cookies/cookies-keys';
 import {
   setUsername,
   setWhatsapp,
@@ -17,8 +18,9 @@ function Register() {
   const {
     username, whatsapp, email, password, confirmPass, matchPass,
   } = useSelector((state) => state.register);
-
   const dispatch = useDispatch();
+
+  const { auth } = cookieKeys;
 
   const navigate = useNavigate();
 
@@ -65,10 +67,12 @@ function Register() {
     e.preventDefault();
     try {
       await submitValidation();
+      const usernameLowerCase = username.toLowerCase();
+      const emailLowerCase = email.toLowerCase();
       await axios.post(
         '/register',
         {
-          username, whatsapp, email, password,
+          username: usernameLowerCase, whatsapp, email: emailLowerCase, password,
         },
       );
       const successAlert = changeSwalConfig('success', 'Yeayy...');
@@ -80,7 +84,7 @@ function Register() {
   }
 
   useEffect(() => {
-    if (localStorage.getItem('auth') !== null) navigate('/');
+    if (cookies.get(auth) !== undefined) window.location.href = '/';
   }, []);
 
   useEffect(() => {
@@ -141,7 +145,7 @@ function Register() {
             onBlur={(e) => dispatch(setPassword(e.target.value))}
             required
           />
-          { alphanumeric() ? '' : <p className="text-danger">Password harus kombinasi huruf dan angka</p> }
+          {alphanumeric() ? '' : <p className="text-danger">Password harus kombinasi huruf dan angka</p>}
         </div>
         <div className="mb-3">
           <input
@@ -153,7 +157,7 @@ function Register() {
             onBlur={(e) => dispatch(setConfirmPass(e.target.value))}
             required
           />
-          { matchPass ? '' : <p className="text-danger">Konfirmasi Password tidak sesuai</p> }
+          {matchPass ? '' : <p className="text-danger">Konfirmasi Password tidak sesuai</p>}
         </div>
         <div className="C-btn-wrapper mb-3">
           <button className="C-btn" type="submit">Signup</button>
