@@ -93,6 +93,28 @@ html {
   }
 }
 
+.C-login {
+  .C-password-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+  }
+  
+  .C-show-password-btn {
+    background-color: unset;
+    border: unset;
+    position: absolute;
+    margin-right: .6rem;
+  }
+
+  .C-show-password-img {
+    height: 44px;
+    padding: 7px;
+  }
+}
+
+
 @media only screen and (max-width:992px) {
   @include navbar-lg;
 }

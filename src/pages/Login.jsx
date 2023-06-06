@@ -15,6 +15,7 @@ function Login() {
 
   const emailOrUsernameRef = useRef();
   const passwordRef = useRef();
+  const eyePasswordImgRef = useRef();
 
   function errorMassageAfterSubmit(err) {
     cookies.remove(auth);
@@ -56,6 +57,18 @@ function Login() {
     }
   }
 
+  function handleShowPassword(e) {
+    if (e.target.classList.contains('hide')) {
+      passwordRef.current.type = 'password';
+      eyePasswordImgRef.current.src = `${process.env.PUBLIC_URL}icons/eye-off.svg`;
+      e.target.classList.remove('hide');
+    } else {
+      passwordRef.current.type = 'text';
+      eyePasswordImgRef.current.src = `${process.env.PUBLIC_URL}icons/eye-on.svg`;
+      e.target.classList.add('hide');
+    }
+  }
+
   useEffect(() => {
     if (cookies.get(auth) !== undefined) window.location.href = '/';
   }, []);
@@ -65,7 +78,7 @@ function Login() {
   }, []);
 
   return (
-    <main className="C-container-full p-3">
+    <main className="C-login C-container-full p-3">
       <form className="C-card col-12 col-lg-5 p-3" autoComplete="off" onSubmit={handleSubmit}>
         <h2 className="C-form-title">Login</h2>
         <div className="mb-3">
@@ -79,7 +92,7 @@ function Login() {
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="C-password-wrapper mb-3">
           <input
             type="password"
             className="C-input"
@@ -89,6 +102,9 @@ function Login() {
             onChange={(e) => dispatch(setPassword(e.target.value))}
             required
           />
+          <button className="C-show-password-btn" type="button" onClick={handleShowPassword}>
+            <img className="C-show-password-img" ref={eyePasswordImgRef} src={`${process.env.PUBLIC_URL}icons/eye-off.svg`} alt="eye password button" />
+          </button>
         </div>
         <div className="C-btn-wrapper mb-3">
           <button className="C-btn" type="submit">Login</button>
