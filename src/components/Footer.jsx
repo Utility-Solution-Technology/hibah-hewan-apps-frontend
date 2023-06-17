@@ -1,7 +1,7 @@
-import { Navbar, Container } from "react-bootstrap"
+import { Navbar, Container } from 'react-bootstrap';
 
-const Footer = () => {
-    return (
+function Footer() {
+  return (
     <Navbar className="mt-5" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">Adoption Animal</Navbar.Brand>
@@ -13,7 +13,7 @@ const Footer = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -3,6 +3,7 @@
 @import 'font';
 @import 'navbar';
 @import 'home';
+@import 'detail';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
@@ -23,6 +24,12 @@ html {
 }
 
 @include home;
+@include detail;
+
+.divider{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 .C-container-full {
   display: flex;
