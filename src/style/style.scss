@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'bootstrap-edited';
+@import 'font';
 @import 'navbar';
+@import 'home';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
@@ -19,6 +21,8 @@ html {
 * {
   box-sizing: border-box;
 }
+
+@include home;
 
 .C-container-full {
   display: flex;
@@ -92,28 +96,6 @@ html {
     border-bottom-color: $color-main;
   }
 }
-
-.C-login {
-  .C-password-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  
-  }
-  
-  .C-show-password-btn {
-    background-color: unset;
-    border: unset;
-    position: absolute;
-    margin-right: .6rem;
-  }
-
-  .C-show-password-img {
-    height: 44px;
-    padding: 7px;
-  }
-}
-
 
 @media only screen and (max-width:992px) {
   @include navbar-lg;
