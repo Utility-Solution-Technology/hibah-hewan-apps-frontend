@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import { cookies, cookieKeys } from './cookies/cookies-keys';
+import { cookies, cookieKeys } from './utils/cookies';
 import AuthNavbar from './components/auth-component/authAdditional';
 
 function Navbar() {
@@ -46,6 +46,7 @@ function Navbar() {
         </div>
         <ul className="C-navlist" ref={navlistRef}>
           <li><Link className="C-link" to="/">Daftar Hewan</Link></li>
+          <li><Link className="C-link" to="/hibah-hewan">Hibahkan Hewan</Link></li>
           {authBool ? <AuthNavbar /> : (
             <>
               <li><Link className="C-link C-link-btn" to="/login">Login</Link></li>

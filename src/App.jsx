@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import HibahkanHewan from './pages/HibahkanHewan';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+          <Route path="hibah-hewan" element={<HibahkanHewan />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

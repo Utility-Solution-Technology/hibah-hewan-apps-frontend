@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { swalConfig, changeSwalConfig } from '../utils/swal-handler';
 import axios from '../proxy/baseURL';
-import { cookies, cookieKeys } from '../cookies/cookies-keys';
+import { cookies, cookieKeys } from '../utils/cookies';
 import {
   setUsername,
   setWhatsapp,
