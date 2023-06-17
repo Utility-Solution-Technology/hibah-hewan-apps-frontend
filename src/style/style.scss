@@ -3,6 +3,7 @@
 @import 'font';
 @import 'navbar';
 @import 'home';
+@import 'upload';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
@@ -11,11 +12,16 @@
 }
 
 @include navbar;
+@include upload;
 
 body,
 html {
   margin: 0;
   font-family: sans-serif;
+}
+
+main {
+  min-height: calc(100vh - 8em - 5rem);
 }
 
 * {
@@ -37,7 +43,10 @@ html {
 }
 
 .C-link {
-  padding: .85rem;
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  min-width: 44px;
   text-decoration: none;
   font-weight: 600;
   color: $color-main;
@@ -97,6 +106,28 @@ html {
   }
 }
 
+.col-lg-6 {
+  flex: unset !important;
+}
+
+.C-d-flex {
+  display: flex;
+  padding: 0 9%;
+  gap: 3rem;
+}
+
+.C-logo-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.C-logo-img {
+  height: 85%;
+  object-fit: contain;
+}
+
 .C-login {
   .C-password-wrapper {
     display: flex;
@@ -121,4 +152,19 @@ html {
 
 @media only screen and (max-width:992px) {
   @include navbar-lg;
+  @include upload-lg;
+
+  .C-logo-link {
+    margin: 0;
+    margin-left: 1em !important;
+  }
+
+  .C-d-flex {
+    padding: unset;
+    flex-direction: column-reverse;
+
+    .C-upload-data.C-card {
+      border-radius: unset;
+    }
+  }
 }
