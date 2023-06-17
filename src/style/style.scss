@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'bootstrap-edited';
+@import 'font';
 @import 'navbar';
+@import 'home';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
@@ -19,6 +21,8 @@ html {
 * {
   box-sizing: border-box;
 }
+
+@include home;
 
 .C-container-full {
   display: flex;
