@@ -1,0 +1,36 @@
+@mixin home {
+  .home {
+    padding-top: 5px;
+    height: 55vh;
+
+    .heading-home {
+      font-size: 46px;
+      font-weight: map-get($font-weight, bold);
+      color: $color-black;
+    }
+
+    .subheading-home {
+      font-size: 20px;
+      font-weight: map-get($font-weight, light);
+      color: $color-black;
+      margin-bottom: 30px;
+    }
+
+    .C-link-home {
+      border-radius: $br-8;
+      border: 2px solid $color-main;
+
+      &:hover {
+        color: $color-white !important;
+        background-color: $color-main-darker !important;
+      }
+    }
+
+    .C-home {
+      color: $color-white !important;
+      background-color: $color-main-brighter !important;
+    }
+
+  }
+
+}
