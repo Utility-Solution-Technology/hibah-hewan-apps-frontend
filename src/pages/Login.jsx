@@ -111,7 +111,7 @@ function Login() {
         </div>
         <div className="mb-3">
           <p className="text-center">
-            Already have an account?
+            Already have an account?{' '}
             <Link className="C-link" to="/register">Signup here!</Link>
           </p>
         </div>
