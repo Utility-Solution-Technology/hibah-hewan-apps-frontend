@@ -1,10 +1,15 @@
 import React from 'react';
+import HomeContent from './home/HomeContent';
+import CardContent from './home/CardContent';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
-    <main>
-      <h1>dummy tag</h1>
-    </main>
+    <div>
+      <HomeContent />
+      <CardContent />
+      <Footer />
+    </div>
   );
 }
 
