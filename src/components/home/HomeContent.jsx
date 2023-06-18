@@ -13,7 +13,7 @@ function HomeContent() {
             </h1>
             <p className="subheading-home">Ayo hibahkan hewan yang sudah tidak terawat di rumah agar mendapatkan kehidupan yang layak</p>
             <div className="btn-home">
-              <Link to="/hibah-hewan" className="C-link C-link-home C-home px-3">Hibahkan Hewan</Link>
+              <Link to="/hibah-hewan" className="C-link C-link-btn C-home px-3">Hibahkan Hewan</Link>
             </div>
           </div>
           <div className="col-lg-6">
