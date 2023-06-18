@@ -1,0 +1,42 @@
+@mixin favorite{
+  .listFavorite{
+    margin-top: 50px;
+
+    .listFav{
+      font-weight: 600;
+      font-size: 20px;
+      
+    }
+
+    .jenisFav{
+      font-weight: 600;
+      font-size: 20px;
+      
+    }
+
+    .deskFav{
+      font-weight: 600;
+      font-size: 20px;
+      
+    }
+  }
+
+  .dataFavorite{
+
+    .img-data{
+      border-radius: 10px;
+      max-width: 300px;
+      max-height: 300px;
+    }
+    .dataHewan{
+      font-size: 16px;
+    }
+    .jenisHewan{
+      font-size: 16px;
+    }
+    .deskHewan{
+      font-size: 16px;
+    }
+    
+  }
+}
