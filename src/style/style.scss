@@ -1,5 +1,4 @@
 @import 'variables';
-@import 'bootstrap-edited';
 @import 'font';
 @import 'navbar';
 @import 'home';
@@ -66,7 +65,6 @@ main {
 .C-btn-wrapper {
   height: calc(44px + .8rem);
   display: flex;
-  margin: auto;
 }
 
 .C-btn {
