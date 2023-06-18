@@ -84,7 +84,7 @@ function Register() {
   }
 
   useEffect(() => {
-    if (cookies.get(auth) !== undefined) window.location.href = '/';
+    if (cookies.get(auth) !== undefined) navigate('/');
   }, []);
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import moment from 'moment-timezone';
 import { cookies, cookieKeys } from '../utils/cookies';
@@ -19,6 +20,8 @@ function HibahkanHewan() {
 
   const imageFileRef = useRef();
   const animalImageRef = useRef();
+
+  const navigate = useNavigate();
 
   const currentDate = moment().format('DD/MM/YYYY');
   const currentTime = moment().format('LTS');
@@ -55,7 +58,7 @@ function HibahkanHewan() {
   };
 
   useEffect(() => {
-    if (cookies.get(auth) === undefined) window.location.href = '/login';
+    if (cookies.get(auth) === undefined) navigate('/login');
   }, []);
 
   return (
