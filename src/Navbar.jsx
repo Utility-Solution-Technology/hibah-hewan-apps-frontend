@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { cookies, cookieKeys } from './utils/cookies';
 import LogoNavbar from './components/Logo';
-import AuthNavbar from './components/auth-component/authAdditional';
+import AuthNavbar from './components/authAdditional';
 
 function Navbar() {
   const [authBool, setAuthBool] = useState('');

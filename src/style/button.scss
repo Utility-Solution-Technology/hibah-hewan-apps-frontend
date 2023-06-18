@@ -9,12 +9,12 @@
 
 .btn-first {
     @extend .btn-master;
-    background-color: $button-color;
+    background-color: $color-main;
     color: #fff;
 }
 
 .btn-second {
     @extend .btn-master;
-    border: 2px solid $button-color;
-    color: $button-color;
+    border: 2px solid $color-main;
+    color: $color-main;
 }
