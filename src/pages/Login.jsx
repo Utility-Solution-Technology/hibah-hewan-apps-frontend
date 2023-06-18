@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { swalConfig } from '../utils/swal-handler';
 import axios from '../proxy/baseURL';
-import { cookies, cookieKeys } from '../cookies/cookies-keys';
+import { cookies, cookieKeys } from '../utils/cookies';
 import { setEmailOrUsername, setPassword } from '../redux/login-slice';
 
 function Login() {
@@ -111,7 +111,7 @@ function Login() {
         </div>
         <div className="mb-3">
           <p className="text-center">
-            Already have an account?
+            Already have an account?{' '}
             <Link className="C-link" to="/register">Signup here!</Link>
           </p>
         </div>

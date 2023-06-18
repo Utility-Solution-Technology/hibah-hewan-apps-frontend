@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import { cookies, cookieKeys } from './cookies/cookies-keys';
+import { cookies, cookieKeys } from './utils/cookies';
+import LogoNavbar from './components/Logo';
 import AuthNavbar from './components/auth-component/authAdditional';
 
 function Navbar() {
@@ -27,8 +28,10 @@ function Navbar() {
   }
 
   useEffect(() => {
-    const getAllList = document.querySelectorAll('nav .C-link');
-    getAllList.forEach((item) => item.addEventListener('click', handleCloseMenu));
+    setTimeout(() => {
+      const getAllList = document.querySelectorAll('nav a.C-link');
+      getAllList.forEach((item) => item.addEventListener('click', handleCloseMenu));
+    }, 400);
   }, []);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ function Navbar() {
     <header>
       <nav>
         <div className="C-menu-lg">
-          <Link className="C-logo-text" to="/">Adoption<span>Animal</span></Link>
+          {LogoNavbar}
           <input type="image" className="C-open-icon d-lg-none" src={`${process.env.PUBLIC_URL}/icons/open-menu.svg`} alt="Open menu button" onClick={handleOpenMenu} ref={openRef} />
           <input type="image" className="C-close-icon d-lg-none" src={`${process.env.PUBLIC_URL}/icons/close-menu.svg`} alt="Close menu button" onClick={handleCloseMenu} ref={closeRef} />
         </div>
@@ -49,7 +52,7 @@ function Navbar() {
           {authBool ? <AuthNavbar /> : (
             <>
               <li><Link className="C-link C-link-btn" to="/login">Login</Link></li>
-              <li><Link className="C-link C-link-btn C-signup" to="/register">Signup</Link></li>
+              <li><Link className="C-link C-link-btn C-link-blue" to="/register">Signup</Link></li>
             </>
           )}
         </ul>
