@@ -53,6 +53,7 @@ function Login() {
       dispatch(setEmailOrUsername(''));
       dispatch(setPassword(''));
       cookies.set(auth, response.data, { path: '/' });
+      // improve navigate
       window.location.href = '/';
     } catch (err) {
       errorMassageAfterSubmit(err);
