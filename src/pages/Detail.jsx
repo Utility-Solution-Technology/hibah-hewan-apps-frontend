@@ -5,11 +5,13 @@ import Footer from '../components/Footer';
 
 function Detail() {
   return (
-    <div>
-      <DetailContent />
-      <DetailDeskripsi />
+    <>
+      <main>
+        <DetailContent />
+        <DetailDeskripsi />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
