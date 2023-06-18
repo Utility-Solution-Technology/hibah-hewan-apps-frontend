@@ -4,6 +4,7 @@
 @import 'home';
 @import 'detail';
 @import 'upload';
+@import 'favorite';
 
 @mixin box-shadow($bs-config) {
   box-shadow: $bs-config;
@@ -30,6 +31,7 @@ main {
 
 @include home;
 @include detail;
+@include favorite;
 
 .divider{
   margin-top: 30px;
