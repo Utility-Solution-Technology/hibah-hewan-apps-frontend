@@ -7,11 +7,11 @@ function Footer() {
     <div className="footer">
       <Navbar className="mt-5" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Adoption Animal</Navbar.Brand>
+          <Navbar.Brand href="#home">Abule</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Copyright @2023: <a href="#login" className="text-decoration-none">All right reserved</a>
+              Copyright HumbleDev @2023: <a href="#login" className="text-decoration-none">All right reserved</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

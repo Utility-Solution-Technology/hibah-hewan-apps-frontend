@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Detail from './pages/Detail';
+import Favorite from './pages/Favorite';
 import HibahkanHewan from './pages/HibahkanHewan';
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path="hibah-hewan" element={<HibahkanHewan />} />
           <Route path="*" element={<NoPage />} />
           <Route path="detail" element={<Detail />} />
+          <Route path="favorite" element={<Favorite />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
