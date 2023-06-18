@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Swal from 'sweetalert2';
 import { swalConfig } from '../utils/swal-handler';
@@ -16,6 +16,8 @@ function Login() {
   const emailOrUsernameRef = useRef();
   const passwordRef = useRef();
   const eyePasswordImgRef = useRef();
+
+  const navigate = useNavigate();
 
   function errorMassageAfterSubmit(err) {
     cookies.remove(auth);
@@ -51,7 +53,7 @@ function Login() {
       dispatch(setEmailOrUsername(''));
       dispatch(setPassword(''));
       cookies.set(auth, response.data, { path: '/' });
-      window.location.href = '/';
+      navigate('/');
     } catch (err) {
       errorMassageAfterSubmit(err);
     }
@@ -70,7 +72,7 @@ function Login() {
   }
 
   useEffect(() => {
-    if (cookies.get(auth) !== undefined) window.location.href = '/';
+    if (cookies.get(auth) !== undefined) navigate('/');
   }, []);
 
   useEffect(() => {
