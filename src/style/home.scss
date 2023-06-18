@@ -1,7 +1,7 @@
-@mixin home {
-  .home {
-    padding-top: 5px;
-    height: 55vh;
+@mixin home{
+        .home{
+        padding-top: 5px;
+        height: 100%;
 
     .heading-home {
       font-size: 46px;
@@ -19,6 +19,22 @@
     .C-link-home {
       border-radius: $br-8;
       border: 2px solid $color-main;
+
+        .C-link-home {
+            border-radius: $br-8;
+            border: 2px solid $color-main;
+      
+            &:hover {
+              color: $color-white !important;
+              background-color: $color-main-darker !important;
+            }
+          }
+      
+          .C-home {
+            color: $color-white !important;
+            background-color: $color-main-brighter !important;
+        }
+      
 
       &:hover {
         color: $color-white !important;

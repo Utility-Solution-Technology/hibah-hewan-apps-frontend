@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Detail from './pages/Detail';
 import HibahkanHewan from './pages/HibahkanHewan';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="hibah-hewan" element={<HibahkanHewan />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="detail" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>
