@@ -1,0 +1,48 @@
+@mixin upload {
+  .C-upload {
+    margin-top: 2rem;
+
+    .C-form-upload {
+      position: sticky;
+      top: 5em;
+    }
+
+    .C-btn {
+      width: 100% !important;
+    }
+
+    .C-left>* {
+      width: 75%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .C-img-upload-animal {
+      width: 75%;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+
+    .C-upload-img-file {
+      border-radius: unset !important;
+    }
+  }
+}
+
+@mixin upload-lg {
+  .C-upload {
+    .C-form-upload {
+      box-sizing: border-box;
+      margin: 1rem !important;
+    }
+
+    .C-left>* {
+      width: 100%;
+    }
+
+    .C-img-upload-animal {
+      width: 100%;
+    }
+  }
+}
