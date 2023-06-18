@@ -1,6 +1,6 @@
 import React from 'react';
-import DetailContent from './detail/DetailContent';
-import DetailDeskripsi from './detail/DetailDeskripsi';
+import DetailContent from '../components/detail/DetailContent';
+import DetailDeskripsi from '../components/detail/DetailDeskripsi';
 import Footer from '../components/Footer';
 
 function Detail() {
