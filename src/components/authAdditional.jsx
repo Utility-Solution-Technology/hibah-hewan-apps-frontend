@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { cookies, cookieKeys } from '../../utils/cookies';
+import { cookies, cookieKeys } from '../utils/cookies';
 
 export default function AuthNavbar() {
   const { auth } = cookieKeys;

@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeContent from './home/HomeContent';
-import CardContent from './home/CardContent';
+import HomeContent from '../components/home/HomeContent';
+import CardContent from '../components/home/CardContent';
 import Footer from '../components/Footer';
 
 function Home() {
