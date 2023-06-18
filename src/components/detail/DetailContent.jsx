@@ -7,9 +7,7 @@ function DetailContent() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
-            <div className="detailImage">
-              <img className="d-block w-100" src={`${process.env.PUBLIC_URL}/images/hewan/hewan2.png`} alt="" />
-            </div>
+            <img className="detailImage d-block w-100" src={`${process.env.PUBLIC_URL}/images/hewan/hewan2.png`} alt="" />
           </div>
           <div className="col-lg-6">
             <h1 className="detailTitle">
