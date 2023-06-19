@@ -213,7 +213,6 @@ main {
   }
 
   .C-animal-wrapper {
-  grid-template-columns: auto;
-  justify-content: center;
+    grid-template-columns: repeat(auto-fit, 96%);
   }
 }
