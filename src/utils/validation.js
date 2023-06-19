@@ -23,7 +23,8 @@ export default function readImageValidation(e, set) {
     return false;
   }
 
-  const newName = `${userId}_${imageObj.name.replace(/ /g, '_')}`;
+  const getType = imageObj.type.split('/')[1];
+  const newName = `${userId}.${getType}}`;
   const newFile = new File([imageObj], newName, {
     type: imageObj.type,
     lastModified: imageObj.lastModified,

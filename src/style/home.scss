@@ -16,32 +16,6 @@
       margin-bottom: 30px;
     }
 
-    .C-link-home {
-      border-radius: $br-8;
-      border: 2px solid $color-main;
-
-        .C-link-home {
-            border-radius: $br-8;
-            border: 2px solid $color-main;
-      
-            &:hover {
-              color: $color-white !important;
-              background-color: $color-main-darker !important;
-            }
-          }
-      
-          .C-home {
-            color: $color-white !important;
-            background-color: $color-main-brighter !important;
-        }
-      
-
-      &:hover {
-        color: $color-white !important;
-        background-color: $color-main-darker !important;
-      }
-    }
-
     .C-home {
       color: $color-white !important;
       background-color: $color-main-brighter !important;
