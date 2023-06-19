@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NoPage from './pages/NoPage';
+import Profile from './pages/Profile';
 import Navbar from './Navbar';
 import Home from './pages/Home';
 import Register from './pages/Register';
@@ -18,7 +18,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="hibah-hewan" element={<HibahkanHewan />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<Profile />} />
           <Route path="detail" element={<Detail />} />
           <Route path="favorite" element={<Favorite />} />
 
