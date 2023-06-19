@@ -18,6 +18,8 @@ export default function AuthNavbar() {
       <ul className="dropdown-menu C-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <li><Link className="C-link" to="/profile">Profile</Link></li>
         <li><Link className="C-link" to="/hibah-hewan">Hibahkan Hewan</Link></li>
+        <li><Link className="C-link" to="/peliharaan">Peliharaan</Link></li>
+        <li><Link className="C-link" to="/histori">Histori Transaksi</Link></li>
         <li><button type="button" className="C-link C-link-btn" onClick={handleLogout}>Logout</button></li>
       </ul>
     </li>
