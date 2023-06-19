@@ -33,7 +33,7 @@ main {
 @include detail;
 @include favorite;
 
-.divider{
+.divider {
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -83,10 +83,28 @@ main {
     background-color: $color-main-darker;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     @include box-shadow($bs-main);
     border: 2px solid $color-main-brighter;
   }
+}
+
+.C-link-btn {
+  padding: 0 .7rem;
+  border-radius: $br-8;
+  background-color: $color-white;
+  border: 2px solid $color-main;
+
+  &:hover {
+    color: $color-white !important;
+    background-color: $color-main-darker !important;
+  }
+}
+
+.C-link-blue {
+  color: $color-white !important;
+  background-color: $color-main !important;
 }
 
 .C-form-title {
@@ -140,9 +158,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  
+
   }
-  
+
   .C-show-password-btn {
     background-color: unset;
     border: unset;
@@ -154,6 +172,18 @@ main {
     height: 44px;
     padding: 7px;
   }
+}
+
+.C-animal-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33%);
+  gap: 1rem;
+}
+
+.C-animal-img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
 }
 
 
@@ -173,5 +203,10 @@ main {
     .C-upload-data.C-card {
       border-radius: unset;
     }
+  }
+
+  .C-animal-wrapper {
+  grid-template-columns: auto;
+  justify-content: center;
   }
 }
