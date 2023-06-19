@@ -176,7 +176,8 @@ main {
 
 .C-animal-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 33%);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 23%);
   gap: 1rem;
 }
 
