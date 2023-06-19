@@ -34,7 +34,7 @@ function Animal({ urlGetUpload, getImageUpload }) {
                 <Card.Title>{`${name} ${type}`}</Card.Title>
                 <Card.Text>{`Usia: ${age} Tahun`}</Card.Text>
                 <div className="d-flex align-items-end justify-content-between">
-                  <Link className="C-link C-link-btn C-link-blue">Detail</Link>
+                  <Link className="C-link C-link-btn C-link-blue" to="/detail">Detail</Link>
                   <p className="m-0"><small>{time}</small></p>
                 </div>
               </Card.Body>
