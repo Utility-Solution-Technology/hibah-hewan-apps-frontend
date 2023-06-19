@@ -23,15 +23,15 @@ function Animal({ urlGetUpload, getImageUpload }) {
       }) => {
         const time = time_create.split('_')[0];
         return (
-          <div className="col-md-3" key={_id}>
-            <Card style={{ width: '18rem' }}>
+          <div key={_id}>
+            <Card>
               <div className="d-flex px-3 py-1">
                 <img height="40em" src={`${process.env.PUBLIC_URL}/icons/profile.svg`} alt="" />
                 <p className="my-auto">{userData[0].username}</p>
               </div>
               <Card.Img variant="top" className="C-animal-img" src={urlGetUpload + path} alt={path} />
               <Card.Body>
-                <Card.Title>{`${name} ${type}`}</Card.Title>
+                <Card.Title className="C-ellipsis">{`${name} ${type}`}</Card.Title>
                 <Card.Text>{`Usia: ${age} Tahun`}</Card.Text>
                 <div className="d-flex align-items-end justify-content-between">
                   <Link className="C-link C-link-btn C-link-blue" to="/detail">Detail</Link>
