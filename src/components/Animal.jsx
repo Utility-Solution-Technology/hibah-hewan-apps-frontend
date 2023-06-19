@@ -31,7 +31,7 @@ function Animal({ urlGetUpload, getImageUpload }) {
               </div>
               <Card.Img variant="top" className="C-animal-img" src={urlGetUpload + path} alt={path} />
               <Card.Body>
-                <Card.Title>{`${name} ${type}`}</Card.Title>
+                <Card.Title className="C-ellipsis">{`${name} ${type}`}</Card.Title>
                 <Card.Text>{`Usia: ${age} Tahun`}</Card.Text>
                 <div className="d-flex align-items-end justify-content-between">
                   <Link className="C-link C-link-btn C-link-blue" to="/detail">Detail</Link>

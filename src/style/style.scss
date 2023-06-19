@@ -184,9 +184,15 @@ main {
 .C-animal-img {
   width: 100%;
   height: 10rem;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: $color-black;
 }
 
+.C-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 @media only screen and (max-width:992px) {
   @include navbar-lg;
