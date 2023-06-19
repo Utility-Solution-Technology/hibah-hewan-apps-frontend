@@ -42,7 +42,16 @@ function HibahkanHewan() {
         await axios.post(
           '/upload',
           {
-            name: file, type, category, age, weight, caption, currentDate, currentTime, base64,
+            path: file,
+            name,
+            type,
+            category,
+            age,
+            weight,
+            caption,
+            currentDate,
+            currentTime,
+            base64,
           },
           { header: { 'Content-Type': 'application/json' } },
         );
@@ -110,10 +119,10 @@ function HibahkanHewan() {
               </div>
               <div className="mb-3">
                 <label className="form-label" htmlFor="category">Kategori</label>
-                <select className="form-select" aria-label=".form-select-lg category" onChange={(e) => setCategory(e.target.value)}>
-                  <option selected disabled>Pilih kategori hewan</option>
-                  <option value="anabul">Anabul</option>
-                  <option value="reptil">Reptil</option>
+                <select className="form-select" aria-label=".form-select-lg category" defaultValue="DEFAULT" onChange={(e) => setCategory(e.target.value)}>
+                  <option value="DEFAULT" disabled>Pilih kategori hewan</option>
+                  <option value="Anabul">Anabul</option>
+                  <option value="Reptil">Reptil</option>
                 </select>
               </div>
               <div className="row mb-3">
