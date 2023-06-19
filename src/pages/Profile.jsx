@@ -7,7 +7,7 @@ function Profile() {
     <>
       <main>
         <article>
-          <h1 className="ok">Profil</h1>
+          <h1 className="h1">Profil</h1>
           <form className="C-d-flex">
             <div className="col-lg-6">
               <div className="mb-3">
