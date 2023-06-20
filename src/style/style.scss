@@ -194,30 +194,7 @@ main {
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width:992px) {
-  @include navbar-lg;
-  @include upload-lg;
-
-  .C-logo-link {
-    margin: 0;
-    margin-left: 1em !important;
-  }
-
-  .C-d-flex {
-    padding: unset;
-    flex-direction: column-reverse;
-
-    .C-upload-data.C-card {
-      border-radius: unset;
-    }
-  }
-
-  .C-animal-wrapper {
-    grid-template-columns: repeat(auto-fit, 96%);
-  }
-}
-
-.C-person *{
+.C-person * {
   font-size: medium;
   text-align: center;
 }
@@ -239,4 +216,31 @@ main {
   height: 10rem;
   object-fit: contain;
   background-color: white;
+}
+
+@media only screen and (max-width:992px) {
+  @include navbar-lg;
+  @include upload-lg;
+
+  .C-logo-link {
+    margin: 0;
+    margin-left: 1em !important;
+  }
+
+  .C-d-flex {
+    padding: unset;
+    flex-direction: column-reverse;
+
+    .C-upload-data.C-card {
+      border-radius: unset;
+    }
+  }
+
+  .C-animal-wrapper {
+    grid-template-columns: repeat(auto-fit, 96%);
+  }
+  
+  .C-people-wrapper {
+    grid-template-columns: repeat(auto-fit, 96%);
+  }
 }
