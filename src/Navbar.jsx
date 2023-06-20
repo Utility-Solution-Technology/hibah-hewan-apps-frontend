@@ -49,6 +49,7 @@ function Navbar() {
         </div>
         <ul className="C-navlist" ref={navlistRef}>
           <li><Link className="C-link" to="/">Daftar Hewan</Link></li>
+          <li><Link className="C-link" to="/aboutus">About Us</Link></li>
           {authBool ? <AuthNavbar /> : (
             <>
               <li><Link className="C-link C-link-btn" to="/login">Login</Link></li>

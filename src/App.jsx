@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Detail from './pages/Detail';
 import Favorite from './pages/Favorite';
 import HibahkanHewan from './pages/HibahkanHewan';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="detail" element={<Detail />} />
           <Route path="favorite" element={<Favorite />} />
+          <Route path="aboutus" element={<AboutUs />} />
 
         </Route>
       </Routes>

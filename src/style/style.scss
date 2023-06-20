@@ -216,3 +216,27 @@ main {
     grid-template-columns: repeat(auto-fit, 96%);
   }
 }
+
+.C-person *{
+  font-size: medium;
+  text-align: center;
+}
+
+.caption-people {
+  height: 9rem;
+}
+
+.C-people-wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 23%);
+  gap: 1rem;
+}
+
+.C-people-img {
+  margin-top: 1rem;
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+  background-color: white;
+}
